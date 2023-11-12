@@ -34,17 +34,17 @@ func toCamelCase(input string) string {
 }
 
 // Call to create empty Fields object
-func NewFields_Empty() *Fields {
-	return &Fields{}
+func NewFields_Empty() Fields {
+	return Fields{}
 }
 
 // Call to create Fields from any struct object, using camelCase mapping
-func NewFields(s interface{}) *Fields {
+func NewFields(s interface{}) Fields {
 	logFields := Fields{}
 	for key, val := range structs_to_map.Map(s) {
 		logFields[toCamelCase(key)] = val
 	}
-	return &logFields
+	return logFields
 }
 
 func (x *Fields) AddFields(extraFields map[string]interface{}) {
