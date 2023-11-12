@@ -7,3 +7,5 @@ require (
 )
 
 go 1.13
+
+replace github.com/sirupsen/logrus => github.com/adeelabbas/logrus v1.0.0
