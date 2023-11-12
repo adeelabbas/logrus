@@ -1,7 +1,5 @@
 module github.com/sirupsen/logrus
 
-replace github.com/sirupsen/logrus => github.com/adeelabbas/logrus
-
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/stretchr/testify v1.7.0
