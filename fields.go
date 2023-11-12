@@ -10,6 +10,9 @@ import (
 	structs_to_map "github.com/fatih/structs"
 )
 
+// Common global fields that will be set in every log
+var GlobalFields Fields = make(Fields)
+
 // Converts snake_case or PascalCase to camelCase
 func toCamelCase(input string) string {
 	// Split the input string into words using underscores as separators
