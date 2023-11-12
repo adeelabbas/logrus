@@ -39,9 +39,9 @@ func NewFields_Empty() Fields {
 }
 
 // Call to create Fields from any struct object, using camelCase mapping
-func NewFields(s interface{}) Fields {
+func NewFields(anyObject interface{}) Fields {
 	logFields := Fields{}
-	for key, val := range structs_to_map.Map(s) {
+	for key, val := range structs_to_map.Map(anyObject) {
 		logFields[toCamelCase(key)] = val
 	}
 	return logFields
