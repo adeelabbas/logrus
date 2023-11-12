@@ -1,4 +1,6 @@
-module github.com/adeelabbas/logrus
+module github.com/sirupsen/logrus
+
+replace github.com/y/original-project => github.com/adeelabbas/logrus
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
